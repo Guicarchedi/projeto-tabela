@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 24px 16px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+input[type="text"] {
+    flex: 1 1 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    padding: 8px 16px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #0056b3;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background: #f0f0f0;
+}
+tr:nth-child(even) {
+    background: #fafafa;
+}
+.sum-section {
+    margin: 16px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+#sumResult {
+    font-weight: bold;
+    color: #007bff;
+}
+@media (max-width: 700px) {
+    .container {
+        max-width: 98vw;
+        padding: 8px 2vw;
+    }
+    table, th, td {
+        font-size: 15px;
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+    .container {
+        padding: 4px 1vw;
+    }
+    table, th, td {
+        font-size: 13px;
+    }
+    .sum-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.edit-btn, .delete-btn {
+    background: #ffc107;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-left: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+}
+.delete-btn {
+    background: #dc3545;
+    color: #fff;
+}
+.edit-btn:hover {
+    background: #e0a800;
+}
+.delete-btn:hover {
+    background: #c82333;
+}
+select[multiple] {
+    min-width: 120px;
+    min-height: 40px;
+}
+.modal-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: #fff;
+    padding: 24px 20px 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    min-width: 260px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-content h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+.modal-content input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: flex-end;
+}
+.modal-actions button {
+    padding: 7px 18px;
+    font-size: 1em;
+    border-radius: 4px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.modal-actions button:hover {
+    background: #0056b3;
+}
+.mensagem-sucesso {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #28a745;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    z-index: 2000;
+    display: none;
+    animation: fadeInOut 3.5s;
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@media (max-width: 480px) {
+    .modal-content {
+        min-width: 90vw;
+        padding: 12px 4vw 8px 4vw;
+    }
+}
+.lista-tabelas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.btn-tabela-salva {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 4px;
+}
+.btn-tabela-salva:hover {
+    background: #0056b3;
+}
+@media (max-width: 480px) {
+    .lista-tabelas {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .btn-tabela-salva {
+        width: 100%;
+        font-size: 0.98em;
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criador de Tabelas Dinâmicas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Criador de Tabelas Dinâmicas</h1>
+        <form id="tableForm">
+            <label for="columns">Colunas (separe por vírgula):</label>
+            <input type="text" id="columns" placeholder="Ex: Produto, Quantidade, Preço" required>
+            <button type="submit">Criar Tabela</button>
+        </form>
+        <div id="tableSection" style="display:none;">
+            <form id="rowForm">
+                <div id="inputs"></div>
+                <button type="submit">Adicionar Linha</button>
+            </form>
+            <div class="sum-section">
+                <label for="sumColumn">Escolha a coluna para somar:</label>
+                <select id="sumColumn"></select>
+                <span id="sumResult"></span>
+            </div>
+            <div id="tableContainer"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
